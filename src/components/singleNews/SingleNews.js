@@ -12,7 +12,7 @@ export default function SingleNews(props){
 
     return (
         <div id="div">
-        <Card id = 'card' style={{ width: '18rem' }}>
+        <Card id = 'card' style = {{ width: '18rem' }}>
         <Card.Img style={{height :"400px"}} variant="top" src = {props.data.image} />
         <Card.Body id="card-body">
             <Card.Title>{props.data.title}</Card.Title>
