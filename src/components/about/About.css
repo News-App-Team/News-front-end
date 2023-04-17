@@ -1,0 +1,44 @@
+body {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    border-radius: 20px;
+   
+
+    background: #ffbca8;
+    border-top: 4px solid var(--main-red);
+    flex-direction: row;
+    text-align: center;
+    
+   
+
+    font-family: 'Raleway', sans-serif;
+    transform: translateY(8px);
+    background: linear-gradient(rgb(7, 7, 7), rgba(74, 18, 100, 0.84));
+   
+
+
+}
+
+.card {
+    
+    background: linear-gradient(hsl(345, 77%, 22%), rgba(280,180,120,0.5));
+   
+
+    margin: 0 auto 6rem auto;
+    border-top: 12px groove #eb4d4b;
+    border-radius: 20px;
+    border-bottom: 12px groove #ddf107f6;
+    margin-bottom: 6rem;
+    display: flex;
+    border-radius: 50px !important;
+    text-align: center;
+    font-weight: bold;
+    color:rgb(252, 246, 246);
+
+
+
+}
+
+.about {}

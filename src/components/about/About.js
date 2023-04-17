@@ -1,30 +1,44 @@
 import React from 'react';
-import About from "./About.css"
-import Footer from "./components/footer/Footer.js";
-import Header from "./components/header/Header.js";
-import Carousel from 'react-bootstrap/Carousel';
-import Carousel from 'react-bootstrap/Carousel';
+import "./About.css";
+import Header from "./components/header/Header.js"
+import Footer from "./components/footer/Footer.js"
+// import Carousel from 'react-bootstrap/Carousel';
+import Card from 'react-bootstrap/Card';
+// const image= require ("./Image");
+
 export default function About(props) {
+
+
   return (
     <>
     <Header/>
-      {props.data.map(group => (
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={group.image}
-              alt={group.name}
-            />
-            <Carousel.Caption>
-              <h3>{group.Major}</h3>
-              <p>{group.Skills}</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+    <div className='about'>
+      {
+      props.data.map(group => (
+       
+       
+
+<Card className="card">
+ 
+        <Card.Img variant="top" src="{group.image}" />
+        <Card.Body>
+        <Card.Text>
+          {group.name}
+          </Card.Text>
+          <Card.Text>
+          {group.Major}
+          </Card.Text>
+          <Card.Text>
+          {group.Skills}
+          </Card.Text>
+          
+        </Card.Body>
+      </Card>
       ))}
-      <Footer/>
+     </div>
+     <Footer/>
     </>
+
   );
 }
 
