@@ -1,0 +1,33 @@
+ [
+    {
+        "name": "Malek Abdelal",
+        "image": "",
+        "Major":"Computer Engineer",
+        "Skills": "passionate about Hacking and Software development"
+    },
+    {
+        "name": "Abdallah",
+        "image": "",
+        "Major":"",
+        "Skills": ""
+    },
+    {
+    
+        "name": "Lina Alzaben",
+        "image": "",
+        "Major":"Biomedical Engineer",
+        "Skills":"Interest in machine learning, data science, signal processing, and programming languages"
+    },
+    {
+        "name": "Hasan",
+        "image": "",
+        "Major":"",
+        "Skills": ""
+    },
+    {
+        "name": "Duaa Melhem",
+       "image":"", 
+    "Major" :" Computer Science",
+        "Skills": "Learning anything about anything, intrested in Web-Development"
+    }
+]
