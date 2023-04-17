@@ -9,7 +9,7 @@ export default function Home(){
 
     async function fetchTrending(){
 
-        const response = await fetch(`${url}/getNews/the-washington-post`);
+        const response = await fetch(`${url}/getNews/bbc-news`);
         const trendingData = await response.json();
         setReadLater(trendingData);
         console.log(readLater);

@@ -7,6 +7,8 @@ export default function NavBar () {
         <nav>
             <ul>
                 <li><Link className="link" to = '/'>Home</Link></li>
+                <li><Link className="link" to = '/aljazeera'>aljazeera</Link></li>
+                <li><Link className="link" to = '/bbcnews'>bbcNews</Link></li>
                 <li><Link className="link" to = '/readLater'>Read Later</Link></li>
                 <li>Popular Now</li>
             </ul>
