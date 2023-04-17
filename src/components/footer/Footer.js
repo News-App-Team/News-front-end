@@ -1,3 +1,4 @@
+
 import "./Footer.css";
 
 export default function Footer() {
@@ -12,3 +13,4 @@ export default function Footer() {
     </footer>
   );
 }
+
