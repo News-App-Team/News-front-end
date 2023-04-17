@@ -1,0 +1,11 @@
+#card-title{
+    font-family: Courier New, monospace;
+
+}
+#card {
+    display: flex;
+    margin: 70px;
+    border: 1px solid #cbac11;
+    box-shadow: 10px 15px 10px #796e0e;
+    
+  }
