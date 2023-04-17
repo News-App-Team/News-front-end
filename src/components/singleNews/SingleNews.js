@@ -15,6 +15,7 @@ export default function SingleNews(props){
         <Card id = 'card' style = {{ width: '18rem' }}>
         <Card.Img style={{height :"400px"}} variant="top" src = {props.data.image} />
         <Card.Body id="card-body">
+            <p>{props.data.source}</p>
             <Card.Title>{props.data.title}</Card.Title>
             <div id = 'button'>
             <Button id="add-fav-btn" variant="primary" onClick={handleShowModal}>Show Details</Button>
