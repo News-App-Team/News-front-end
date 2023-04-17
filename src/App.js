@@ -4,7 +4,7 @@ import Home from './components/home/Home';
 import ReadLater from './components/readLater/ReadLater';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-
+import AboutUs from './components/about/About';
 function App() {
   return (
     <>
@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/readLater' element={<ReadLater />}></Route>
+          <Route path='/AboutUs' element={<AboutUs />}></Route>
         </Routes>
       </div>
       <Footer />

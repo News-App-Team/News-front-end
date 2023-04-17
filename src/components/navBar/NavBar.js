@@ -8,6 +8,7 @@ export default function NavBar () {
             <ul>
                 <li><Link className="link" to = '/'>Home</Link></li>
                 <li><Link className="link" to = '/readLater'>Read Later</Link></li>
+                <li><Link className="link" to = '/AboutUs'>About Us</Link></li>
                 <li>Popular Now</li>
             </ul>
         </nav>
