@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AllNews from '../allNews/AllNews';
 import './Aljazeera.css';
 
+
 export default function Home(){
     
     const url = process.env.REACT_APP_URL;

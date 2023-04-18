@@ -13,7 +13,6 @@ export default function Home() {
         //  const response = await fetch(`${url}/getNews/bbc-news`);
 
 
-
         const response = await fetch(`${url}/getNews/the-washington-post`);
         const trendingData = await response.json();
         setReadLater(trendingData);
