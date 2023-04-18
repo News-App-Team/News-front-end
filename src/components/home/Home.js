@@ -1,37 +1,35 @@
 import { useEffect, useState } from "react";
-import AllNews from '../allNews/AllNews';
-import './Home.css';
+import AllNews from "../allNews/AllNews";
+import "./Home.css";
+import React from "react";
 
 export default function Home() {
+  const url = process.env.REACT_APP_URL;
 
-    const url = process.env.REACT_APP_URL;
+  const [readLater, setReadLater] = useState([]);
 
-    const [readLater, setReadLater] = useState([]);
+  async function fetchTrending() {
+    const response = await fetch(`${url}/getNews/the-washington-post`);
+    const trendingData = await response.json();
+    setReadLater(trendingData);
+    console.log(readLater);
+  }
 
-    async function fetchTrending() {
-        // const response = await fetch(`${url}/getNews/al-jazeera-english`);
-        //  const response = await fetch(`${url}/getNews/bbc-news`);
+  useEffect(() => {
+    fetchTrending();
+  }, []);
 
-
-        const response = await fetch(`${url}/getNews/the-washington-post`);
-        const trendingData = await response.json();
-        setReadLater(trendingData);
-        console.log(readLater);
+  function addCommentProp(comment, id) {
+    for (const movie of readLater) {
+      if (movie.id === id) {
+        movie.comment = comment;
+      }
     }
+  }
 
-    useEffect(() => { fetchTrending() }, []);
-
-    function addCommentProp(comment, id) {
-        for (const movie of readLater) {
-            if (movie.id === id) {
-                movie.comment = comment;
-            }
-        }
-    }
-
-    return (
-        <>
-            <AllNews data={readLater} addCommentProp={addCommentProp} />
-        </>
-    )
+  return (
+    <>
+      <AllNews data={readLater} addCommentProp={addCommentProp} />
+    </>
+  );
 }
