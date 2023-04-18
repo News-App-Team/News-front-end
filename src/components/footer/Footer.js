@@ -20,12 +20,13 @@ export default function Footer() {
             <div className="row">
               <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">
-                  Company name
+                  World News
                 </h6>
                 <p>
-                  Here you can use rows and columns to organize your footer
-                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit.
+                  is simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a galley of type
+                  and scrambled it to make a type specimen book.
                 </p>
               </div>
 
@@ -33,19 +34,22 @@ export default function Footer() {
 
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">
-                  Products
+                  Channels
                 </h6>
                 <p>
-                  <a className="text-white">MDBootstrap</a>
+                  <a className="text-white" href="/">
+                    Washington News
+                  </a>
                 </p>
                 <p>
-                  <a className="text-white">MDWordPress</a>
+                  <a className="text-white" href="/aljazeera">
+                    Aljazeera News
+                  </a>
                 </p>
                 <p>
-                  <a className="text-white">BrandFlow</a>
-                </p>
-                <p>
-                  <a className="text-white">Bootstrap Angular</a>
+                  <a className="text-white" href="/bbcnews">
+                    BBC News
+                  </a>
                 </p>
               </div>
 
@@ -58,16 +62,16 @@ export default function Footer() {
                   Contact
                 </h6>
                 <p>
-                  <i className="fas fa-home mr-3"></i> New York, NY 10012, US
+                  <i className="fas fa-home mr-3"></i> Amman, Jordan
                 </p>
                 <p>
-                  <i className="fas fa-envelope mr-3"></i> info@gmail.com
+                  <i className="fas fa-envelope mr-3"></i> WorldNews@gmail.com
                 </p>
                 <p>
-                  <i className="fas fa-phone mr-3"></i> + 01 234 567 88
+                  <i className="fas fa-phone mr-3"></i> + 962 7 7777 6666
                 </p>
                 <p>
-                  <i className="fas fa-print mr-3"></i> + 01 234 567 89
+                  <i className="fas fa-print mr-3"></i> + 962 7 7777 5555
                 </p>
               </div>
 
@@ -124,14 +128,8 @@ export default function Footer() {
           </section>
         </div>
 
-        <div
-          className="text-center p-3"
-          style={{ backgroundColor: "#212529" }}
-        >
-          © 2020 Copyright:
-          <a className="text-white" href="https://mdbootstrap.com/">
-            MDBootstrap.com
-          </a>
+        <div className="text-center p-3" style={{ backgroundColor: "#212529" }}>
+          © 2023 Copyright : All Rights Reserved
         </div>
       </footer>
     </div>
