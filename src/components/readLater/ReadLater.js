@@ -60,8 +60,8 @@ export default function ReadLater() {
                             <p>{news.comment}</p>
                             <input ref={updatedComment} type="text" placeholder="Add your Note here" />
                             <div id='button'>
-                                <Button variant="secondary" onClick={() => handleDelete(news.id)}>Delete</Button>
-                                <Button variant="warning" onClick={() => handleUpdate(news.id)}>Update</Button>
+                                <Button className="my-button" variant="secondary" onClick={() => handleDelete(news.id)}>Delete</Button>
+                                <Button className="my-button" variant="primary" onClick={() => handleUpdate(news.id)}>Update</Button>
                             </div>
                         </Card.Body>
                     </Card>
