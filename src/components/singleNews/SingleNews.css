@@ -1,20 +1,15 @@
-#card-title{
-    font-family: Courier New, monospace;
+#containerDiv {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  margin-top: 3rem;
+  border: none;
 
 }
-#card {
-    display: flex;
-    margin: 70px;
-    border: 1px solid #cbac11;
-    box-shadow: 10px 15px 10px #796e0e;
-    
-    
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 10px #c79305;
-  }
-  .card:hover Img {
-    opacity: 0.8;
-  }
+
+#button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
 
