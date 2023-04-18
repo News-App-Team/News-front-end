@@ -17,7 +17,9 @@ export default function AllNews(props) {
                 alt={news.title}
               />
               <Carousel.Caption>
+                <a href={news.url} className="newsURL" >  
                 <h3>{news.title}</h3>
+                </a>
                 <p>{news.description}</p>
               </Carousel.Caption>
             </Carousel.Item>

@@ -61,7 +61,8 @@ export default function SingleNews(props) {
             </MDBCol>
             <MDBCol md="8">
               <MDBCardBody>
-                <MDBCardTitle>{props.data.title}</MDBCardTitle>
+                <MDBCardTitle><a href={props.data.url} className="title-link" >{props.data.title}</a></MDBCardTitle>
+                <MDBCardText>{props.data.source}</MDBCardText>
                 <MDBCardText>{props.data.description}</MDBCardText>
                 <br /> <br />
                 <div id="button">
