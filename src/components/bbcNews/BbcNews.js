@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import AllNews from '../allNews/AllNews';
+import './BbcNews.css';
+
 
 export default function Home(){
     

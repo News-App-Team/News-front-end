@@ -1,7 +1,9 @@
 #containerDiv {
-  padding-left: 25%;
-  padding-right: 25%;
+  width: 100%;
+  display:flex;
+  justify-content: center;
   margin-top: 3rem;
+  border: none;
 
 }
 
@@ -10,3 +12,4 @@
   right: 20px;
   bottom: 20px;
 }
+
