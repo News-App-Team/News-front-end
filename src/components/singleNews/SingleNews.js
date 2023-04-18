@@ -1,3 +1,4 @@
+
 import Button from "react-bootstrap/Button";
 // import Card from "react-bootstrap/Card";
 import ModalNews from "../modalNews/ModalNews";
@@ -21,32 +22,7 @@ export default function SingleNews(props) {
 
   return (
     <div id="containerDiv">
-      {/* <Card id="card" style={{ width: "18rem" }}>
-          <Card.Img
-            style={{ height: "400px" }}
-            variant="top"
-            src={props.data.image}
-          />
-          <Card.Body id="card-body">
-            <p>{props.data.source}</p>
-            <Card.Title>{props.data.title}</Card.Title>
-            <div id="button">
-              <Button
-                id="add-fav-btn"
-                variant="primary"
-                onClick={handleShowModal}
-              >
-                Show Details
-              </Button>
-            </div>
-          </Card.Body>
-        </Card> */}
-      <ModalNews
-        data={props.data}
-        handleClose={handleCloseModal}
-        show={showModal}
-        addCommentProp={props.addCommentProp}
-      />
+      <ModalNews data={props.data} handleClose={handleCloseModal} show={showModal} addCommentProp={props.addCommentProp} />
 
       <div>
         <MDBCard style={{ maxWidth: "900px" }}>

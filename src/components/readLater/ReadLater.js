@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import {Button, Form, Card} from 'react-bootstrap';
+import NavDropdown from "react-bootstrap/NavDropdown";
 import './ReadLater.css';
 
-export default function ReadLater (){
-    
+export default function ReadLater() {
+
     const [readLaterNews, setReadLaterNews] = useState([]);
+    const [dropDownChoice, setDropDownChoice] = useState(false);
     
     async function getReadLaterNews(){
 
@@ -15,13 +17,15 @@ export default function ReadLater (){
         setReadLaterNews(resData);
     }
 
-    async function handleDelete(id){
+    async function handleDelete(id) {
         const url = `${process.env.REACT_APP_URL}/deleteNews/${id}`;
-        const response = await fetch(url, {method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' }});
+        const response = await fetch(url, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' }
+        });
 
-       if(response.status === 204) { 
-        getReadLaterNews();
+        if (response.status === 204) {
+            getReadLaterNews();
         }
     }
 
@@ -36,16 +40,23 @@ export default function ReadLater (){
     }
 
 
-    useEffect(() => {getReadLaterNews()}, []);
+    useEffect(() => { getReadLaterNews() }, []);
 
-    return (
-        <div id="container">
-        { readLaterNews && readLaterNews.map(news => {
-            return (
+    return (<>
+            <NavDropdown title="Channels" id="basic-nav-dropdown">
+                <NavDropdown.Item onClick={() => {setDropDownChoice("The Washington Post")}}>Washington News</NavDropdown.Item>
+                <NavDropdown.Item onClick={()=>{setDropDownChoice("Al Jazeera English")}}> Aljazeera News </NavDropdown.Item>
+                <NavDropdown.Item onClick={()=>{setDropDownChoice("BBC News")}}>BBC News</NavDropdown.Item>
+            </NavDropdown>       
+            <div id="container">
+            { readLaterNews && readLaterNews.map(news => {
+                return ((dropDownChoice || "The Washington Post") === news.source) ?
+             
                 <Card id = 'card' style={{ width: '18rem' }}>
                 <Card.Body id="card-body">
                 <Card.Img style={{height :"400px"}} variant="top" src = {news.image} />
                     <Card.Title>{news.title}</Card.Title>
+                    <p>{news.source}</p>
                     <Card.Text>{news.description}</Card.Text>
                     <p>{news.comment}</p>
                     <Form onSubmit={(event) => handleUpdate(event, news.id)}>
@@ -58,9 +69,9 @@ export default function ReadLater (){
                     <div id = 'button'>
                     </div>
                 </Card.Body>
-                </Card>
-            )
-        })}
-        </div>
+                </Card>:null;
+        
+        })}</div>
+        </>
     )
 } 

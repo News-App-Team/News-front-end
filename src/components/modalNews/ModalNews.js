@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useRef } from 'react';
+import './ModalNews.css';
 
 
 export default function ModalNews(props){
@@ -45,7 +46,7 @@ export default function ModalNews(props){
         <>
         <Modal id= "modal" show={props.show} onHide={props.handleClose}>
         <Modal.Header closeButton>
-            <Modal.Title>{props.data.title}</Modal.Title>
+            <Modal.Title id="card-title">{props.data.title}</Modal.Title>
         </Modal.Header>
         <img id='modal-img' src = {props.data.image} alt = {props.data.title}/>
         <Modal.Body>{props.data.description}</Modal.Body>

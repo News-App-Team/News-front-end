@@ -6,16 +6,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 export default function NavBar () {
     return (
       <>
-        {/* <p>World Times</p>
-        <div>
-          <ul>
-                <li><Link className="link" to = '/'>Home</Link></li>
-                <li><Link className="link" to = '/aljazeera'>aljazeera</Link></li>
-                <li><Link className="link" to = '/bbcnews'>bbcNews</Link></li>
-                <li><Link className="link" to = '/readLater'>Read Later</Link></li>
-                <li>Popular Now</li>
-            </ul>
-        <div/> */}
         <Navbar bg="dark" variant="dark">
           <Container>
             <Navbar.Brand href="/">World news</Navbar.Brand>

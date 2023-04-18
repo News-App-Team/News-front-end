@@ -5,7 +5,6 @@ export default function AllNews(props) {
   return (
     <>
       <Carousel>
-        {/* console.log('PROPS', props.data); */}
         {props.data.slice(0, 3).map((news, index) => {
           console.log(news);
           return (

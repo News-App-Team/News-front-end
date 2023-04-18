@@ -12,3 +12,13 @@
   right: 20px;
   bottom: 20px;
 }
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: width 1s, height 1s, transform 1s;
+  }
+
+.card:not(:hover) {
+    transition: width 1s, height 1s, transform .3s;
+  }
+
