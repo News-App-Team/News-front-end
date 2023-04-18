@@ -13,7 +13,7 @@ export default function Footer() {
     <div id="footer" className="container-fluid my-5 mx-0 px-0 w-100 ">
       <footer
         className="text-center text-lg-start text-white "
-        style={{ backgroundColor: "rgb(34 36 35)" }}
+        style={{ backgroundColor: "rgb(50 50 50)" }}
       >
         <div className="container-fluid p-4 pb-0">
           <section className="">
@@ -126,7 +126,7 @@ export default function Footer() {
 
         <div
           className="text-center p-3"
-          style={{ backgroundColor: "rgb(0, 0, 0)" }}
+          style={{ backgroundColor: "#212529" }}
         >
           © 2020 Copyright:
           <a className="text-white" href="https://mdbootstrap.com/">
