@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ModalNews from '../modalNews/ModalNews';
+import './SingleNews.css';
 import { useState } from 'react';
 
 export default function SingleNews(props){
@@ -11,7 +12,7 @@ export default function SingleNews(props){
     const handleShowModal = () => setShowModal(true);
 
     return (
-        <div id="div">
+        <div id="card-container">
         <Card id = 'card' style = {{ width: '18rem' }}>
         <Card.Img style={{height :"400px"}} variant="top" src = {props.data.image} />
         <Card.Body id="card-body">

@@ -1,4 +1,5 @@
 import SingleNews from '../singleNews/SingleNews';
+import './AllNews.css';
 export default function AllNews(props){
     return(
         <>
@@ -6,7 +7,10 @@ export default function AllNews(props){
         <div id = "container">
             {props.data.map(news => {
                 console.log(news);
-                return <SingleNews data = {news} addCommentProp = {props.addCommentProp}/>
+                return (
+                <div>
+                    <SingleNews data = {news} addCommentProp = {props.addCommentProp}/></div>
+                )
             })}
         </div>
         </>

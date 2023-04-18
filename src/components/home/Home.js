@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AllNews from '../allNews/AllNews';
+import './Home.css';
 
 export default function Home(){
     
@@ -26,8 +27,8 @@ export default function Home(){
     }
     
     return (
-        <>
+        <div id = "home-container">
         <AllNews data = {readLater} addCommentProp = {addCommentProp}/>
-        </>
+        </div>
     )
 }

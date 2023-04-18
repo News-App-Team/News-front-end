@@ -1,20 +1,15 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { useState, useEffect } from "react";
+import {Button, Form, Card} from 'react-bootstrap';
 import './ReadLater.css';
 
 export default function ReadLater (){
     
     const [readLaterNews, setReadLaterNews] = useState([]);
     
-    const updatedComment = useRef();
-
     async function getReadLaterNews(){
 
         const url = `${process.env.REACT_APP_URL}/getDbNews`;
-
+                                                                            
         const response = await fetch(url);
         const resData = await response.json();
         setReadLaterNews(resData);
@@ -30,11 +25,10 @@ export default function ReadLater (){
         }
     }
 
-    async function handleUpdate(id){
+    async function handleUpdate(event, id){
+        event.preventDefault();
         const url = `${process.env.REACT_APP_URL}/updateNews/${id}`;
-        const data = {comment : updatedComment.current.value};
-        console.log(updatedComment.current.value);
-        console.log(id);
+        const data = {comment : event.target.comment.value};
         await fetch(url, {method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data) });
@@ -54,10 +48,14 @@ export default function ReadLater (){
                     <Card.Title>{news.title}</Card.Title>
                     <Card.Text>{news.description}</Card.Text>
                     <p>{news.comment}</p>
-                    <input ref ={updatedComment} type="text" placeholder="Add your Note here"/>        
+                    <Form onSubmit={(event) => handleUpdate(event, news.id)}>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Control name="comment" as="textarea" rows={1} />
+                        </Form.Group>
+                        <Button variant="primary" onClick={() => handleDelete(news.id)}>Delete</Button>
+                        <Button type="submit" variant="primary">Update</Button>
+                    </Form>
                     <div id = 'button'>
-                    <Button variant="primary" onClick={() => handleDelete(news.id)}>Delete</Button>
-                    <Button variant="primary" onClick={() => handleUpdate(news.id)}>Update</Button>
                     </div>
                 </Card.Body>
                 </Card>
