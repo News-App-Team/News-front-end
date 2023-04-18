@@ -1,12 +1,19 @@
 import "./Footer.css";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+  FaGoogle,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="container-fluid my-5 mx-0 px-0 w-100 ">
+    <div id="footer" className="container-fluid my-5 mx-0 px-0 w-100 ">
       <footer
-        className="text-center text-lg-start text-white"
-        style={{ "background-color": "#929fbf" }}
+        className="text-center text-lg-start text-white "
+        style={{ backgroundColor: "rgb(34 36 35)" }}
       >
         <div className="container-fluid p-4 pb-0">
           <section className="">
@@ -71,7 +78,7 @@ export default function Footer() {
 
                 <a
                   className="btn btn-primary btn-floating m-1"
-                  style={{ "background-color": "#3b5998" }}
+                  style={{ backgroundColor: "#3b5998" }}
                   href="#!"
                   role="button"
                 >
@@ -80,7 +87,7 @@ export default function Footer() {
 
                 <a
                   className="btn btn-primary btn-floating m-1"
-                  style={{ "background-color": "#55acee" }}
+                  style={{ backgroundColor: "#55acee" }}
                   href="#!"
                   role="button"
                 >
@@ -89,37 +96,28 @@ export default function Footer() {
 
                 <a
                   className="btn btn-primary btn-floating m-1"
-                  style={{ "background-color": "#dd4b39" }}
+                  style={{ backgroundColor: "#ac2bac" }}
                   href="#!"
                   role="button"
                 >
-                  <i className="fab fa-google"></i>
+                  <FaInstagram />
                 </a>
 
                 <a
                   className="btn btn-primary btn-floating m-1"
-                  style={{ "background-color": "#ac2bac" }}
+                  style={{ backgroundColor: "#0082ca" }}
                   href="#!"
                   role="button"
                 >
-                  <i className="fab fa-instagram"></i>
-                </a>
-
-                <a
-                  className="btn btn-primary btn-floating m-1"
-                  style={{ "background-color": "#0082ca" }}
-                  href="#!"
-                  role="button"
-                >
-                  <i className="fab fa-linkedin-in"></i>
+                  <FaLinkedin />
                 </a>
                 <a
                   className="btn btn-primary btn-floating m-1"
-                  style={{ "background-color": "#333333" }}
+                  style={{ backgroundColor: "#333333" }}
                   href="#!"
                   role="button"
                 >
-                  <i className="fab fa-github"></i>
+                  <FaGithub />
                 </a>
               </div>
             </div>
@@ -128,7 +126,7 @@ export default function Footer() {
 
         <div
           className="text-center p-3"
-          style={{ "background-color": "rgba(0, 0, 0, 0.2)" }}
+          style={{ backgroundColor: "rgb(0, 0, 0)" }}
         >
           © 2020 Copyright:
           <a className="text-white" href="https://mdbootstrap.com/">
