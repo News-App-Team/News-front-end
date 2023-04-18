@@ -1,18 +1,40 @@
-import SingleNews from '../singleNews/SingleNews';
-import './AllNews.css';
-export default function AllNews(props){
-    return(
-        <>
-        <h2 id = "header">Breaking News</h2>
-        <div id = "container">
-            {props.data.map(news => {
-                console.log(news);
-                return (
-                <div>
-                    <SingleNews data = {news} addCommentProp = {props.addCommentProp}/></div>
-                )
-            })}
-        </div>
-        </>
-    )
+import SingleNews from "../singleNews/SingleNews";
+import Carousel from "react-bootstrap/Carousel";
+import "./AllNews.css";
+export default function AllNews(props) {
+  return (
+    <>
+      <Carousel>
+        {/* console.log('PROPS', props.data); */}
+        {props.data.slice(0, 3).map((news, index) => {
+          console.log(news);
+          return (
+            <Carousel.Item interval={1000} key={index}>
+              <img
+                style={{ objectFit: "cover" }}
+                className="d-block w-100 carouselImg"
+                src={news.image}
+                alt={news.title}
+              />
+              <Carousel.Caption>
+                <h3>{news.title}</h3>
+                <p>{news.description}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
+      <div id="container">
+        {props.data.slice(3, props.data.length).map((news, index) => {
+          return (
+            <SingleNews
+              data={news}
+              addCommentProp={props.addCommentProp}
+              key={index}
+            />
+          );
+        })}
+      </div>
+    </>
+  );
 }
