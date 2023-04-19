@@ -1,9 +1,7 @@
 #containerDiv {
-  width: 100%;
-  display:flex;
+  padding: 40px;
+  display: flex;
   justify-content: center;
-  margin-top: 3rem;
-  border: none;
 
 }
 
@@ -13,3 +11,7 @@
   bottom: 20px;
 }
 
+.title-link{
+    text-decoration: none;
+    color: #000000;  
+}

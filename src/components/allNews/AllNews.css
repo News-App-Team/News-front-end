@@ -1,3 +1,8 @@
 .carouselImg {
   height: 500px;
 }
+
+.newsURL{
+        text-decoration: none;
+        color: #ffffff;
+}
