@@ -23,10 +23,10 @@ export default function Footer() {
                   World News
                 </h6>
                 <p>
-                  is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s, when an unknown printer took a galley of type
-                  and scrambled it to make a type specimen book.
+                  Get the latest breaking news from around the world with World
+                  News. Our comprehensive coverage includes politics, business,
+                  technology, sports, entertainment, and more. Trustworthy
+                  sources like The Washington Post, Al Jazeera, and BBC News.
                 </p>
               </div>
 

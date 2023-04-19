@@ -42,19 +42,18 @@ export default function ReadLater() {
 
     useEffect(() => { getReadLaterNews() }, []);
 
-    return (<>
-            <NavDropdown title="Channels" id="basic-nav-dropdown">
+    return (<div id ="contain">
+            <NavDropdown title="Channels" id="bdropdown">
                 <NavDropdown.Item onClick={() => {setDropDownChoice("The Washington Post")}}>Washington News</NavDropdown.Item>
                 <NavDropdown.Item onClick={()=>{setDropDownChoice("Al Jazeera English")}}> Aljazeera News </NavDropdown.Item>
                 <NavDropdown.Item onClick={()=>{setDropDownChoice("BBC News")}}>BBC News</NavDropdown.Item>
-            </NavDropdown>       
-            <div id="container">
+            </NavDropdown>     
+            <div id="container1">
             { readLaterNews && readLaterNews.map(news => {
                 return ((dropDownChoice || "The Washington Post") === news.source) ?
-             
-                <Card id = 'card' style={{ width: '18rem' }}>
+                <Card id = 'card' style={{ width: '22%' }}>
                 <Card.Body id="card-body">
-                <Card.Img style={{height :"400px"}} variant="top" src = {news.image} />
+                <Card.Img style={{height :"170px"}} variant="top" src = {news.image} />
                     <Card.Title>{news.title}</Card.Title>
                     <p>{news.source}</p>
                     <Card.Text>{news.description}</Card.Text>
@@ -66,12 +65,10 @@ export default function ReadLater() {
                         <Button variant="primary" onClick={() => handleDelete(news.id)}>Delete</Button>
                         <Button type="submit" variant="primary">Update</Button>
                     </Form>
-                    <div id = 'button'>
-                    </div>
                 </Card.Body>
                 </Card>:null;
         
         })}</div>
-        </>
+        </div>
     )
 } 

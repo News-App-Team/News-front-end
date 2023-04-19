@@ -1,0 +1,14 @@
+.customNavBarBrand{
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    height: 4rem;
+}
+
+#nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

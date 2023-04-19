@@ -37,9 +37,16 @@ export default function SingleNews(props) {
             </MDBCol>
             <MDBCol md="8">
               <MDBCardBody>
-                <MDBCardTitle>{props.data.title}</MDBCardTitle>
+                <div id="tit-src">
+                <MDBCardTitle><a href={props.data.url} className="title-link" >{props.data.title}</a></MDBCardTitle>
+                <MDBCardText>{props.data.source}</MDBCardText>
+                </div>
                 <MDBCardText>{props.data.description}</MDBCardText>
-                <br /> <br />
+                <div id="auth-date">
+                <MDBCardText>{`Author: ${props.data.author}`}</MDBCardText>
+                <MDBCardText>{`Publish Date: ${props.data.publishedAt.replace((/[TZ]/ig)," ")}`}</MDBCardText>
+                </div>
+                <br/>
                 <div id="button">
                   <Button
                     id="add-fav-btn"

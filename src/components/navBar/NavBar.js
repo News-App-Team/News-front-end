@@ -1,17 +1,32 @@
-import './NavBar.css';
+import "./NavBar.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-export default function NavBar () {
-    return (
-      <>
-        <Navbar bg="dark" variant="dark">
-          <Container>
-            <Navbar.Brand href="/">World news</Navbar.Brand>
+import img from "../assets/world-news-logo.png";
+export default function NavBar() {
+  return (
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Container className="d-flex ">
+          <div>
+            <Navbar.Brand href="/" className="customNavBarBrand">
+              <img
+                src={img}
+                width="90"
+                height="50"
+                className="me-2"
+                alt="React Bootstrap logo"
+              />
+              <Navbar.Brand className="title" href="/">
+                World news
+              </Navbar.Brand>
+            </Navbar.Brand>
+          </div>
+          <div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav id ="nav" className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/readLater">Read Later</Nav.Link>
                 <NavDropdown title="Channels" id="basic-nav-dropdown">
@@ -21,10 +36,12 @@ export default function NavBar () {
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/bbcnews">BBC News</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="/aboutUs">About Us</Nav.Link>
               </Nav>
             </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </>
-    );
+          </div>
+        </Container>
+      </Navbar>
+    </>
+  );
 }

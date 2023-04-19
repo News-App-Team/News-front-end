@@ -6,6 +6,12 @@
 }
 
 #container{
-  display: flex;
   width:60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsURL{
+  text-decoration: none;
+  color: #ffffff;
 }

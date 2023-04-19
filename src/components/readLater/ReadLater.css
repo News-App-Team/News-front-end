@@ -1,66 +1,84 @@
+#contain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+}
 
- #button {
+#nav-item{
+  align-self: center;
+}
+
+#container1{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5%;
+}
+#Button {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
   margin-bottom: 0px;
-  width: 90%;
+  width: 100%;
   cursor: pointer;
   border-radius: 50px;
-  padding: 10px 50px;
+  padding: 15px 20px;
+}
 
+#bdropdown{
+  width: 8%;
+  color: rgb(0, 0, 0);
+  /* background-color: black; */
+  align-self:center;
 }
 
 #card {
-  /* margin: 110px; */
+  margin: 110px;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 10px;
-
 }
-
-#card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+#Card-body:hover {
+  box-shadow: 0 8px 16px 0 rgba(165, 44, 44, 0.4);
 }
-
-#card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-}
-
-#card-title {
+#Card-title {
   font-size: 20px;
   font-weight: bold;
+  padding-top: 20px;
+ 
 }
-
-#card-text {
+.Card-text {
   font-size: 16px;
 }
-
-#container {
-  width: 100%;
+#containerReadLater {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  gap: 5%;
+  justify-content: space-around;
 }
 
-.my-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
+.cardTitleURL{
   text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-
+  color: #000000; 
 }
 
-.my-button:hover {
-  background-color: #0069d9;
-} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
