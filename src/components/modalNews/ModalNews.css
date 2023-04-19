@@ -1,4 +1,85 @@
 .titleStyle{
     text-decoration: none;
     color: #000000; 
+    text-align: center;
+}
+
+#modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40% ;
+    color: rgb(0, 0, 0);
+}
+
+#button{
+    background-color: white;
+    outline-style: none;
+}
+
+.btn-primary{
+    background-color: #000000 ;
+    border: 1px solid black;   
+}
+.btn-primary:hover{
+    background-color: #0d6efd !important ;
+    border-color: #0d6efd;  
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.9) !important;    
+}
+
+#auth-date1{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin-right: 39%;
+font-weight: 500;
+}
+
+#updated-inpt{
+    width: 90% !important;
+    height: 45px !important;
+    border-style: none;
+    padding-left: 2%;
+    border-radius: 8px;
+    outline-style: none;
+    transform: translateY(-3px);
+    transition: width 1s, height 1s, transform 1s;
+    
+}
+
+.modal-title{
+    padding-left: 5%;
+    padding-top: 5%;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.btn-close{
+    margin-top: -16% !important;
+    margin-right: 1% !important;
+}
+
+.modal-body{
+    width :94%;
+    text-align: left;
+    font-size: 18px;
+}
+
+#modal-img{
+    height :20%;
+    width: 90%;
+    border-radius: 2px;
+}
+
+#comment {
+    align-self: flex-start;
+    margin-left: 6%;
 }

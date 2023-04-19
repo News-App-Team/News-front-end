@@ -1,6 +1,6 @@
 
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
 import ModalNews from "../modalNews/ModalNews";
 import { useState } from "react";
 import {
@@ -22,32 +22,7 @@ export default function SingleNews(props) {
 
   return (
     <div id="containerDiv">
-      {/* <Card id="card" style={{ width: "18rem" }}>
-          <Card.Img
-            style={{ height: "400px" }}
-            variant="top"
-            src={props.data.image}
-          />
-          <Card.Body id="card-body">
-            <p>{props.data.source}</p>
-            <Card.Title>{props.data.title}</Card.Title>
-            <div id="button">
-              <Button
-                id="add-fav-btn"
-                variant="primary"
-                onClick={handleShowModal}
-              >
-                Show Details
-              </Button>
-            </div>
-          </Card.Body>
-        </Card> */}
-      <ModalNews
-        data={props.data}
-        handleClose={handleCloseModal}
-        show={showModal}
-        addCommentProp={props.addCommentProp}
-      />
+      <ModalNews data={props.data} handleClose={handleCloseModal} show={showModal} addCommentProp={props.addCommentProp} />
 
       <div>
         <MDBCard style={{ maxWidth: "900px" }}>
@@ -62,10 +37,16 @@ export default function SingleNews(props) {
             </MDBCol>
             <MDBCol md="8">
               <MDBCardBody>
+                <div id="tit-src">
                 <MDBCardTitle><a href={props.data.url} className="title-link" >{props.data.title}</a></MDBCardTitle>
                 <MDBCardText>{props.data.source}</MDBCardText>
+                </div>
                 <MDBCardText>{props.data.description}</MDBCardText>
-                <br /> <br />
+                <div id="auth-date">
+                <MDBCardText>{`Author: ${props.data.author}`}</MDBCardText>
+                <MDBCardText>{`Publish Date: ${props.data.publishedAt.replace((/[TZ]/ig)," ")}`}</MDBCardText>
+                </div>
+                <br/>
                 <div id="button">
                   <Button
                     id="add-fav-btn"

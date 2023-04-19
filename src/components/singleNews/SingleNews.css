@@ -1,7 +1,9 @@
 #containerDiv {
-  padding: 40px;
-  display: flex;
+  width: 100%;
+  display:flex;
   justify-content: center;
+  margin-top: 3rem;
+  border: none;
 
 }
 
@@ -11,6 +13,41 @@
   bottom: 20px;
 }
 
+#auth-date{
+  display: flex;
+  justify-content: space-between;
+  font-weight:500;
+}
+
+#tit-src{
+display: flex;
+flex-direction: column;
+}
+
+#add-fav-btn{
+  background-color: #000000;
+  border: 1px solid black;
+}
+
+#add-fav-btn:hover{
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: width 1s, height 1s, transform 1s;
+}
+
+.card:not(:hover) {
+    transition: width 1s, height 1s, transform .3s;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .title-link{
     text-decoration: none;
     color: #000000;  

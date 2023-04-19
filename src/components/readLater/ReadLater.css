@@ -1,3 +1,23 @@
+#contain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+}
+
+#nav-item{
+  align-self: center;
+}
+
+#container1{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5%;
+}
 #Button {
   display: flex;
   justify-content: space-around;
@@ -8,7 +28,15 @@
   border-radius: 50px;
   padding: 15px 20px;
 }
-#Card {
+
+#bdropdown{
+  width: 8%;
+  color: rgb(0, 0, 0);
+  /* background-color: black; */
+  align-self:center;
+}
+
+#card {
   margin: 110px;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;

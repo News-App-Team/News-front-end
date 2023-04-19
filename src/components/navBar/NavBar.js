@@ -7,24 +7,14 @@ import img from "../assets/world-news-logo.png";
 export default function NavBar() {
   return (
     <>
-      {/* <p>World Times</p>
-        <div>
-          <ul>
-                <li><Link className="link" to = '/'>Home</Link></li>
-                <li><Link className="link" to = '/aljazeera'>aljazeera</Link></li>
-                <li><Link className="link" to = '/bbcnews'>bbcNews</Link></li>
-                <li><Link className="link" to = '/readLater'>Read Later</Link></li>
-                <li>Popular Now</li>
-            </ul>
-        <div/> */}
       <Navbar bg="dark" variant="dark">
         <Container className="d-flex ">
           <div>
             <Navbar.Brand href="/" className="customNavBarBrand">
               <img
                 src={img}
-                width="110"
-                height="70"
+                width="90"
+                height="50"
                 className="me-2"
                 alt="React Bootstrap logo"
               />
@@ -36,10 +26,9 @@ export default function NavBar() {
           <div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav id ="nav" className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/readLater">Read Later</Nav.Link>
-                <Nav.Link href="/aboutUs">About Us</Nav.Link>
                 <NavDropdown title="Channels" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/">Washington News</NavDropdown.Item>
                   <NavDropdown.Item href="/aljazeera">
@@ -47,6 +36,7 @@ export default function NavBar() {
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/bbcnews">BBC News</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="/aboutUs">About Us</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </div>

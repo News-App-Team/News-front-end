@@ -1,6 +1,7 @@
 #footer {
   margin-bottom: 0 !important;
 }
-/* 
-footer{
-} */
+
+p a {
+  text-decoration: none;
+}
