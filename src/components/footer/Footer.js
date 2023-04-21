@@ -37,17 +37,17 @@ export default function Footer() {
                   Channels
                 </h6>
                 <p>
-                  <a className="text-white" href="/">
+                  <a className="text-white aa" href="/">
                     Washington News
                   </a>
                 </p>
                 <p>
-                  <a className="text-white" href="/aljazeera">
+                  <a className="text-white aa" href="/aljazeera">
                     Aljazeera News
                   </a>
                 </p>
                 <p>
-                  <a className="text-white" href="/bbcnews">
+                  <a className="text-white aa" href="/bbcnews">
                     BBC News
                   </a>
                 </p>

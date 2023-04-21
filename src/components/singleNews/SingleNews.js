@@ -21,26 +21,6 @@ export default function SingleNews(props) {
 
   return (
     <div id="containerDiv">
-      {/* <Card id="card" style={{ width: "18rem" }}>
-          <Card.Img
-            style={{ height: "400px" }}
-            variant="top"
-            src={props.data.image}
-          />
-          <Card.Body id="card-body">
-            <p>{props.data.source}</p>
-            <Card.Title>{props.data.title}</Card.Title>
-            <div id="button">
-              <Button
-                id="add-fav-btn"
-                variant="primary"
-                onClick={handleShowModal}
-              >
-                Show Details
-              </Button>
-            </div>
-          </Card.Body>
-        </Card> */}
       <ModalNews
         data={props.data}
         handleClose={handleCloseModal}
@@ -48,8 +28,8 @@ export default function SingleNews(props) {
         addCommentProp={props.addCommentProp}
       />
 
-      <div>
-        <MDBCard style={{ maxWidth: "900px" }}>
+      <div className="w-100 customCard2">
+        <MDBCard style={{ width: "100%" }}>
           <MDBRow className="g-0">
             <MDBCol md="4">
               <MDBCardImage
@@ -60,10 +40,18 @@ export default function SingleNews(props) {
               />
             </MDBCol>
             <MDBCol md="8">
-              <MDBCardBody>
-                <MDBCardTitle><a href={props.data.url} className="title-link" >{props.data.title}</a></MDBCardTitle>
+              <MDBCardBody className="customCardBody">
+                <MDBCardTitle>
+                  <a href={props.data.url} className="title-link" target="_blank" >
+                    {props.data.title}
+                  </a>
+                </MDBCardTitle>
                 <MDBCardText>{props.data.source}</MDBCardText>
                 <MDBCardText>{props.data.description}</MDBCardText>
+               <div className="auth-date">
+                <MDBCardText>{`Author: ${props.data.author}`}</MDBCardText>
+                <MDBCardText>{`Publish Date: ${props.data.publishedAt.replace((/[TZ]/ig)," ")}`}</MDBCardText>
+                </div>
                 <br /> <br />
                 <div id="button">
                   <Button

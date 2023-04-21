@@ -1,12 +1,18 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import { useState, useEffect } from "react";
+import { Button, Form, Card } from "react-bootstrap";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "./ReadLater.css";
+import data from "../../data/staticData";
 export default function ReadLater() {
+  let breakingNews = data.breakingNews;
+  const [showComment, setShowComment] = useState(false);
+  const handleCommentBtn = () => setShowComment(!showComment);
+  function commentBtnState() {
+    return showComment ? "Save changes" : null;
+  }
   const [readLaterNews, setReadLaterNews] = useState([]);
-  const updatedComment = useRef();
+  const [dropDownChoice, setDropDownChoice] = useState(false);
+  const [showSingleInput, setShowSingleInput] = useState([]);
   async function getReadLaterNews() {
     const url = `${process.env.REACT_APP_URL}/getDbNews`;
     const response = await fetch(url);
@@ -23,11 +29,11 @@ export default function ReadLater() {
       getReadLaterNews();
     }
   }
-  async function handleUpdate(id) {
+  async function handleUpdate(event, id) {
+    handleCommentBtn();
+    event.preventDefault();
     const url = `${process.env.REACT_APP_URL}/updateNews/${id}`;
-    const data = { comment: updatedComment.current.value };
-    console.log(updatedComment.current.value);
-    console.log(id);
+    const data = { comment: event.target.comment.value };
     await fetch(url, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -39,44 +45,183 @@ export default function ReadLater() {
     getReadLaterNews();
   }, []);
   return (
-    <div id="containerReadLater" >
-      {readLaterNews &&
-        readLaterNews.map((news) => {
-          return (
-            <Card id="Card" style={{ width: "20rem" }}>
-              <Card.Body id="Card-body">
-                <Card.Img
-                  style={{ height: "250px" }}
-                  variant="top"
-                  src={news.image}
-                />
-                <Card.Title id="Card-title"> <a href={news.url} className="cardTitleURL" >{news.title}</a> </Card.Title>
-                <Card.Text className="Card-text">{news.description}</Card.Text>
-                <p>{news.comment}</p>
-                <input
-                  ref={updatedComment}
-                  type="text"
-                  placeholder="Add your Note here"
-                />
-                <div id="Button">
-                  <Button
-                    className="My-button"
-                    variant="danger"
-                    onClick={() => handleDelete(news.id)}
-                  >
-                    Delete
-                  </Button>
-                  <Button
-                    variant="primary"
-                    onClick={() => handleUpdate(news.id)}
-                  >
-                    Update
-                  </Button>
-                </div>
-              </Card.Body>
-            </Card>
-          );
-        })}
+    <div id="containerReadLater">
+      <NavDropdown title="Resources" className="resourses" id="drop-select">
+        <NavDropdown.Item
+          onClick={() => {
+            setDropDownChoice("The Washington Post");
+          }}
+        >
+          Washington News
+        </NavDropdown.Item>
+        <NavDropdown.Item
+          onClick={() => {
+            setDropDownChoice("Al Jazeera English");
+          }}
+        >
+          {" "}
+          Aljazeera News{" "}
+        </NavDropdown.Item>
+        <NavDropdown.Item
+          onClick={() => {
+            setDropDownChoice("BBC News");
+          }}
+        >
+          BBC News
+        </NavDropdown.Item>
+      </NavDropdown>
+      <div className="readLaterSection">
+        {readLaterNews &&
+          readLaterNews.map((news) => {
+            return dropDownChoice === news.source ? (
+              <Card id="Card">
+                <Card.Body id="Card-body">
+                  <div id="cardContent">
+                    {" "}
+                    <Card.Img
+                      style={{ height: "250px" }}
+                      variant="top"
+                      src={news.image}
+                    />
+                    <Card.Title id="Card-title">
+                      {" "}
+                      <a
+                        href={news.url}
+                        className="cardTitleURL"
+                        target="_blank"
+                      >
+                        {" "}
+                        {news.title}{" "}
+                      </a>{" "}
+                    </Card.Title>
+                    <Card.Text className="Card-text">
+                      {" "}
+                      {news.description}{" "}
+                    </Card.Text>
+                    <p>{news.comment}</p>
+                    <p>{news.source}</p>
+                  </div>
+                  <div id="cardFooter"></div>
+                  <Form onSubmit={(event) => handleUpdate(event, news.id)}>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlTextarea1"
+                    >
+                      {showComment && showSingleInput === news.id ? (
+                        <Form.Control name="comment" as="textarea" rows={1} />
+                      ) : null}
+                    </Form.Group>
+                    <div className="bottunDesign">
+                      <Button
+                        variant="danger"
+                        onClick={() => handleDelete(news.id)}
+                      >
+                        Delete
+                      </Button>
+                      <Button
+                        type="submit"
+                        variant="primary"
+                        onClick={() => {
+                          setShowSingleInput(news.id);
+                        }}
+                      >
+                        {showComment && showSingleInput === news.id
+                          ? commentBtnState()
+                          : "Update"}
+                      </Button>
+                    </div>
+                  </Form>
+                </Card.Body>
+              </Card>
+            ) : null;
+          })}
+        {readLaterNews &&
+          readLaterNews.map((news) => {
+            return dropDownChoice === false ? (
+              <Card id="Card">
+                <Card.Body id="Card-body">
+                  <div id="cardContent">
+                    {" "}
+                    <Card.Img
+                      style={{ height: "250px" }}
+                      variant="top"
+                      src={news.image}
+                    />
+                    <Card.Title id="Card-title">
+                      {" "}
+                      <a
+                        href={news.url}
+                        className="cardTitleURL"
+                        target="_blank"
+                      >
+                        {" "}
+                        {news.title}{" "}
+                      </a>{" "}
+                    </Card.Title>
+                    <Card.Text className="Card-text">
+                      {" "}
+                      {news.description}{" "}
+                    </Card.Text>
+                    <p>{news.source}</p>
+                    <p>{`Your Comment: ${news.comment}`}</p>
+                  </div>
+                  <div id="cardFooter"></div>
+                  <Form onSubmit={(event) => handleUpdate(event, news.id)}>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlTextarea1"
+                    >
+                      {showComment && showSingleInput === news.id ? (
+                        <Form.Control name="comment" as="textarea" rows={1} />
+                      ) : null}
+                    </Form.Group>
+                    <div className="bottunDesign">
+                      <Button
+                        className="buttonWidth"
+                        variant="danger"
+                        onClick={() => handleDelete(news.id)}
+                      >
+                        Delete
+                      </Button>
+                      <Button
+                        className="buttonWidth"
+                        id="add-fav-btn"
+                        type="submit"
+                        variant="primary"
+                        onClick={() => {
+                          setShowSingleInput(news.id);
+                        }}
+                      >
+                        {showComment && showSingleInput === news.id
+                          ? commentBtnState()
+                          : "Update"}
+                      </Button>
+                    </div>
+                  </Form>
+                </Card.Body>
+              </Card>
+            ) : null;
+          })}
+      </div>
+      <div className="breakingNewsSection">
+        <h3 className="breakingNewsTitle">!!! BREAKING NEWS !!!</h3>
+        <div className="breakingNewsSectionBody">
+          {breakingNews?.map((news) => (
+            <div className="singleBreakingNews">
+              <img
+                style={{ width: "100px", height: "auto" }}
+                className="d-block w-100 carouselImg mb-2"
+                src={news.img}
+                alt={news.title}
+              />
+              <a href={news.link} className="newsURLblack" target="_blank">
+                {" "}
+                {news.title}{" "}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
