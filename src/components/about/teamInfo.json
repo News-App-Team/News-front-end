@@ -3,32 +3,38 @@
     {
       "name": "Hasan Alrawaqa",
       "image": "https://i.ibb.co/w0F1Wpw/53261073-2108646995888474-2249399996413640704-n.jpg",
-      "bio": "As an experienced Industrial Engineer, I possess a strong background in my field and am deeply passionate about learning more about programming, Artificial Intelligence, and machine learning. These technologies are invaluable to my work as an Industrial Engineer, enabling me to optimize business and factory operations and increase efficiency, quality, and profitability. My drive to expand my knowledge and expertise in these areas is fueled by a desire to push the boundaries.",
-      "skills": "Analytical thinking | Attention to detail | Problem-solving | Communication skills | Leadership"
-    },
-    {
-      "name": "Malek Abdelal",
-      "image": "https://i.ibb.co/WVFSV4B/Malek.jpg",
-      "bio": "As a computer engineer, I have developed a deep and abiding passion for the fascinating and ever-evolving fields of hacking and software development. I am constantly driven to expand my knowledge and skills in these areas, and I am committed to staying abreast of the latest industry developments in order to create innovative solutions and push the boundaries of what is possible. With a keen eye for detail and a strong work ethic.",
-      "skills": " Problem Solving | Creative Thinking | Teamwork "
-    },
-    {
-      "name": "Leena Alzaben",
-      "image": "https://i.ibb.co/Z2wMV8G/Fotor-AI.jpg",
-      "bio": "a biomedical engineer, I have a strong interest in utilizing machine learning, data science, and signal processing to drive innovative solutions. Programming languages are a key tool in my toolbox, and I am continually honing my skills to optimize my contributions to projects. My passion for these fields drives me to stay up-to-date with the latest industry advancements and continually push myself to achieve new levels of expertise.",
-      "skills": "Enjoys participation in collective work || flexible and always ready to learn."
+      "bio": "",
+      "skills": "Analytical thinking | Attention to detail | Problem-solving | Communication skills | Leadership",
+      "field": "Industrial Engineer"
     },
     {
       "name": "Abdallah Toughoj",
       "image": "https://i.ibb.co/vJNhNNp/Whats-App-Image-2023-04-17-at-2-36-55-PM.jpg",
-      "bio": "As a Person intersted in programming , my aspiration is to specialize in Full Stack Development. I am deeply interested in the intricacies of front-end and back-end development, and I am committed to developing a comprehensive skillset that will enable me to design and deliver top-notch software solutions. Through rigorous study and hands-on experience, I am dedicated to honing my expertise and achieving my goal of becoming a Full Stack Developer.",
-      "skills": "problem-solving | time management | passion for learning new things"
+      "bio": "",
+      "skills": "problem-solving | time management | passion for learning new things",
+      "field": "Computer Information System"
     },
+    {
+      "name": "Malek Abdelal",
+      "image": "https://i.ibb.co/WVFSV4B/Malek.jpg",
+      "bio": "",
+      "skills": "Problem Solving | Creative Thinking | Teamwork ",
+      "field": "Computer Engineer"
+    },
+    {
+      "name": "Leena Alzaben",
+      "image": "https://i.ibb.co/Z2wMV8G/Fotor-AI.jpg",
+      "bio": "",
+      "skills": "Enjoys participation in collective work || flexible and always ready to learn.",
+      "field": "biomedical engineer"
+    },
+
     {
       "name": "Duaa Melhem",
       "image": "https://i.ibb.co/MDH4h6J/Fotor-AI-1.jpg",
-      "bio": "As a Computer Science speacilist, I am driven to continually expand my knowledge and expertise in programming. My current focus is on Web Development, and I am deeply interested in learning more about this field. Through rigorous study and hands-on experience, I am committed to mastering the latest tools and technologies and building innovative solutions that push the boundaries of what is possible in web development.",
-      "skills": "Problem-solving | Creativity | Teamwork | Continuous learning"
+      "bio": "",
+      "skills": "Problem-solving | Creativity | Teamwork | Continuous learning",
+      "field": "Computer Science"
     }
   ],
   "missionStatement": "At our news website, it is our fundamental mission to deliver timely, relevant, and factually correct information to our valued readership, while upholding the highest journalistic standards of accuracy, impartiality, and transparency. We are dedicated to providing insightful and in-depth coverage of local, national, and global events, and to holding those in positions of power accountable through rigorous investigative reporting. Furthermore, we strive to foster an informed and engaged citizenry, by empowering our readers with the knowledge and tools they need to make informed decisions about the world around them. Ultimately, our goal is to be a trusted and respected source of news and analysis for all those who seek to stay informed and engaged in the complex and rapidly evolving landscape of today's world."

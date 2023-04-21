@@ -1,12 +1,12 @@
-import './App.css';
-import { Route, Routes } from 'react-router';
-import Home from './components/home/Home';
-import Aljazeera from './components/aljazeera/Aljazeera';
-import BbcNews from './components/bbcNews/BbcNews';
-import ReadLater from './components/readLater/ReadLater';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import AboutUs from './components/about/About';
+import "./App.css";
+import { Route, Routes } from "react-router";
+import Home from "./components/home/Home";
+import Aljazeera from "./components/aljazeera/Aljazeera";
+import BbcNews from "./components/bbcNews/BbcNews";
+import ReadLater from "./components/readLater/ReadLater";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import AboutUs from "./components/about/About";
 
 function App() {
   return (

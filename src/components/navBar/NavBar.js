@@ -7,14 +7,14 @@ import img from "../assets/world-news-logo.png";
 export default function NavBar() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" className="fixed-top">
         <Container className="d-flex ">
           <div>
             <Navbar.Brand href="/" className="customNavBarBrand">
               <img
                 src={img}
-                width="90"
-                height="50"
+                width="110"
+                height="70"
                 className="me-2"
                 alt="React Bootstrap logo"
               />
@@ -26,17 +26,17 @@ export default function NavBar() {
           <div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav id ="nav" className="me-auto">
+              <Nav className="me-auto customfont">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/readLater">Read Later</Nav.Link>
-                <NavDropdown title="Channels" id="basic-nav-dropdown">
+                <Nav.Link href="/aboutUs">About Us</Nav.Link>
+                <NavDropdown title="Resources" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/">Washington News</NavDropdown.Item>
                   <NavDropdown.Item href="/aljazeera">
                     Aljazeera News
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/bbcnews">BBC News</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="/aboutUs">About Us</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </div>

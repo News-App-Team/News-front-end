@@ -2,13 +2,10 @@
     display: flex;
     align-items: center;
 }
-
-.navbar{
-    height: 4rem;
+.title{
+    font-family: 'Merriweather', serif;
 }
 
-#nav{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.customfont{
+    font-size: 20px;
 }
