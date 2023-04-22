@@ -50,7 +50,7 @@ export default function ReadLater() {
             </NavDropdown>     
             <div id="container1">
             { readLaterNews && readLaterNews.map(news => {
-                return ((dropDownChoice || "The Washington Post") === news.source) ?
+                return  ((dropDownChoice || "The Washington Post") === news.source) ?
                 <Card id = 'card' style={{ width: '22%' }}>
                 <Card.Body id="card-body">
                 <Card.Img style={{height :"170px"}} variant="top" src = {news.image} />
